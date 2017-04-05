@@ -1,0 +1,25 @@
+<div class = "container">
+<h1>신이 나를 만들 때</h1>
+    
+    <div class="row">
+        <% for i in (0..2) %>
+            <div class="col-md-4"><%= @list_rand[i] %>
+                <% if @list_rand[i] != "으어어어어어억" %>
+                   을 한스푼
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+    <div class="row"> 
+        <% for i in (0..2) %>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <% if @list_rand[i] == "으어어어어어억" %>
+                <%= image_tag 6, width: "200"%>
+            <% else %>
+              <%= image_tag @img_rand[i], width: "200" %>
+            <% end%>
+            </div>
+        <% end%>
+    </div>
+
+</div>
